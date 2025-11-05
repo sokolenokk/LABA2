@@ -1,12 +1,13 @@
 import matplotlib.pyplot as plt
 
+
 def graph() -> None:
     xs = [i / 10 for i in range(-100, 101)]
     ys = [x ** 2 for x in xs]
 
     plt.figure(figsize=(6, 4), dpi=100)
 
-    plt.plot(xs, ys, linewidth=2)
+    plt.plot(xs, ys, color="pink", linewidth=2)
 
     plt.title(r"График $y = x^2$")
     plt.xlabel("x")
@@ -20,4 +21,5 @@ def graph() -> None:
     plt.show()
 
 
-graph()
+if __name__ == "__main__":
+    graph()
