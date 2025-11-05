@@ -12,5 +12,5 @@ while True:
     try:
         answer = eval(expression)
         print("Ответ: ", answer)
-    except:
+    except(SyntaxError, NameError, ZeroDivisionError):
         print("Ошибка ввода, повторите попытку")
