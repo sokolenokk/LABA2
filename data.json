@@ -1,0 +1,28 @@
+{
+  "NoneType": null,
+  "author": "Степан Соколовский",
+  "example": "Пример символов кириллицы",
+  "project": "LABA2",
+  "tasks": [
+    {
+      "done": true,
+      "id": 1,
+      "title": "Калькулятор"
+    },
+    {
+      "done": true,
+      "id": 2,
+      "title": "Перевернуть строку"
+    },
+    {
+      "done": true,
+      "id": 3,
+      "title": "Сумма всех нечётных чисел до N"
+    },
+    {
+      "done": true,
+      "id": 4,
+      "title": "Построить график y=x^2 с matplotlib"
+    }
+  ]
+}

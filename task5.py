@@ -39,4 +39,24 @@ def dumps_json(obj: Any) -> str:
     return json.dumps(obj, ensure_ascii=False)
 
 
+def main() -> None:
+    json_path = Path(__file__).with_name("data.json")
 
+    data = data_base()
+    dump_json(data, json_path)
+    print(f"Исходные данные записаны в файл (сериализованы)")
+
+    load = load_json(json_path)
+    print("Данные из файла десериализованны. Количество задач: ",
+          len(load.get("tasks", [])))
+
+    add_task(load, "Сериализация данных после добавления задачи")
+    dump_json(load, json_path)
+    print("Данные после изменения списка задач сериализованны")
+
+    str_dumps = dumps_json({"text": "Hello, World!", "done": True})
+    print("Сериализация в строку реализована: ", str_dumps)
+
+
+if __name__ == "__main__":
+    main()
